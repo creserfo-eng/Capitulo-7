@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Ejercicio 7.11: Kilometraje -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Kilometraje de automóviles</title>
+      <script>
+         var kilometros;
+         var litros;
+         var totalKilometros = 0;
+         var totalLitros = 0;
+         var respuesta;
+
+         respuesta = window.prompt( "Escriba los kilómetros conducidos (-1 para salir):", "0" );
+         kilometros = parseFloat( respuesta );
+
+         while ( kilometros != -1 )
+         {
+            litros = parseFloat( window.prompt( "Escriba los litros usados:", "0" ) );
+            totalKilometros += kilometros;
+            totalLitros += litros;
+            var kmPorLitroViaje = kilometros / litros;
+            document.writeln( "<p>Kilómetros por litro en este viaje: " + kmPorLitroViaje.toFixed(2) + "</p>" );
+            kilometros = parseFloat( window.prompt( "Escriba los kilómetros conducidos (-1 para salir):", "0" ) );
+         }
+
+         if ( totalLitros != 0 )
+         {
+            var kmPorLitroTotal = totalKilometros / totalLitros;
+            document.writeln( "<h1>El total de kilómetros por litro hasta este punto es: " + kmPorLitroTotal.toFixed(2) + "</h1>" );
+         }
+      </script>
+   </head>
+   <body></body>
+</html>

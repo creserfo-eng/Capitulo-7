@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- Ejercicio 7.14: Sueldo bruto -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Cálculo de sueldo bruto</title>
+      <script>
+         var empleado = 1;
+
+         while ( empleado <= 3 )
+         {
+            var horas = parseFloat( window.prompt( "Empleado " + empleado + " - Horas trabajadas:" ) );
+            var tarifa = parseFloat( window.prompt( "Tarifa por hora ($):" ) );
+            var sueldo = 0;
+
+            if ( horas <= 40 )
+               sueldo = horas * tarifa;
+            else
+               sueldo = ( 40 * tarifa ) + ( ( horas - 40 ) * ( tarifa * 1.5 ) );
+
+            document.writeln( "<p>Sueldo bruto del empleado " + empleado + ": $" + sueldo.toFixed(2) + "</p>" );
+            empleado++;
+         }
+      </script>
+   </head>
+   <body></body>
+</html>

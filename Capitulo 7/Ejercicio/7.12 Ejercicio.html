@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- Ejercicio 7.23: Descifrado de datos -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Descifrado de datos</title>
+      <script>
+         var cifrado = window.prompt( "Escriba el número cifrado de cuatro dígitos:" );
+
+         if ( cifrado.length === 4 )
+         {
+            var c1 = parseInt( cifrado.charAt( 0 ) );
+            var c2 = parseInt( cifrado.charAt( 1 ) );
+            var c3 = parseInt( cifrado.charAt( 2 ) );
+            var c4 = parseInt( cifrado.charAt( 3 ) );
+
+            var d1 = ( c1 >= 7 ) ? ( c1 - 7 ) : ( c1 + 10 - 7 );
+            var d2 = ( c2 >= 7 ) ? ( c2 - 7 ) : ( c2 + 10 - 7 );
+            var d3 = ( c3 >= 7 ) ? ( c3 - 7 ) : ( c3 + 10 - 7 );
+            var d4 = ( c4 >= 7 ) ? ( c4 - 7 ) : ( c4 + 10 - 7 );
+
+            var original = "" + d3 + d4 + d1 + d2;
+            document.writeln( "<h1>Número original descifrado: " + original + "</h1>" );
+         }
+      </script>
+   </head>
+   <body></body>
+</html>

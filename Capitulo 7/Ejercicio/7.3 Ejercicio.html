@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- Ejercicio 7.12: Límite de crédito -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Límite de crédito</title>
+      <script>
+         var cuenta = window.prompt( "Escriba el número de cuenta (-1 para salir):", "0" );
+
+         while ( cuenta != "-1" )
+         {
+            var saldoInicial = parseFloat( window.prompt( "Escriba el saldo al inicio del mes:", "0" ) );
+            var cargos = parseFloat( window.prompt( "Escriba el total de artículos cargados en el mes:", "0" ) );
+            var creditos = parseFloat( window.prompt( "Escriba el total de créditos aplicados en el mes:", "0" ) );
+            var limiteCredito = parseFloat( window.prompt( "Escriba el límite de crédito permitido:", "0" ) );
+
+            var nuevoSaldo = saldoInicial + cargos - creditos;
+
+            document.writeln( "<p>Cuenta: " + cuenta + "</p>" );
+            document.writeln( "<p>Nuevo saldo: " + nuevoSaldo.toFixed(2) + "</p>" );
+
+            if ( nuevoSaldo > limiteCredito )
+               document.writeln( "<p style='color: red;'><strong>Se excedió el límite de su crédito</strong></p>" );
+
+            cuenta = window.prompt( "Escriba el número de cuenta (-1 para salir):", "0" );
+         }
+      </script>
+   </head>
+   <body></body>
+</html>

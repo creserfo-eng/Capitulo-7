@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Ejercicio 7.20: Palíndromo -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Palíndromo</title>
+      <script>
+         var numero;
+         var esValido = false;
+
+         while ( !esValido )
+         {
+            numero = window.prompt( "Escriba un entero de cinco dígitos:" );
+            if ( numero.length === 5 && !isNaN( numero ) )
+               esValido = true;
+            else
+               window.alert( "Error: El número debe ser estrictamente de cinco dígitos." );
+         }
+
+         var d1 = numero.charAt( 0 );
+         var d2 = numero.charAt( 1 );
+         var d4 = numero.charAt( 3 );
+         var d5 = numero.charAt( 4 );
+
+         if ( d1 === d5 && d2 === d4 )
+            document.writeln( "<h1>El número " + numero + " SÍ es un palíndromo.</h1>" );
+         else
+            document.writeln( "<h1>El número " + numero + " NO es un palíndromo.</h1>" );
+      </script>
+   </head>
+   <body></body>
+</html>

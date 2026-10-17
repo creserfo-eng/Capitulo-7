@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- Ejercicio 7.22: Cifrado de datos -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Cifrado de datos</title>
+      <script>
+         var entrada = window.prompt( "Escriba un entero de cuatro dígitos para cifrar:" );
+
+         if ( entrada.length === 4 )
+         {
+            var d1 = ( parseInt( entrada.charAt( 0 ) ) + 7 ) % 10;
+            var d2 = ( parseInt( entrada.charAt( 1 ) ) + 7 ) % 10;
+            var d3 = ( parseInt( entrada.charAt( 2 ) ) + 7 ) % 10;
+            var d4 = ( parseInt( entrada.charAt( 3 ) ) + 7 ) % 10;
+
+            var cifrado = "" + d3 + d4 + d1 + d2;
+            document.writeln( "<h1>Número cifrado: " + cifrado + "</h1>" );
+         }
+      </script>
+   </head>
+   <body></body>
+</html>
